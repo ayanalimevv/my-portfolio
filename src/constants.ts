@@ -1,4 +1,4 @@
-export const ResumeLink = "https://drive.google.com/file/d/1U8daZXQEkn8GSiQo5P-Nb6yhiw_eGXZe/view"
+export const ResumeLink = "https://drive.google.com/file/d/1U8daZXQEkn8GSiQo5P-Nb6yhiw_eGXZe/view";
 
 const imageLinks = {
     folder: "./folder_icon.svg",
@@ -7,55 +7,129 @@ const imageLinks = {
     linkedin: './linkedin.svg',
     github: './github.svg',
     medium: './medium.svg',
-    app: './app.svg'
+    app: './app.svg',
+    music: './music.svg',
+    typing: './typing.svg',
+    blog: './blog.svg',
+    movies: './movies.svg',
+    degree: './degree.svg',
+    hsc: './hsc.svg',
+    ssc: './ssc.svg',
+    html: './html.svg',
+    css: './css.svg',
+    javascript: './javascript.svg',
+    ts: './ts.svg',
+    tailwind: './tailwind.svg',
+    react: './react.svg',
+};
+
+// Define types for the components
+interface HomePageComponent {
+    image: string;
+    name: string;
+    link: string;
 }
 
-export const HomePageComponents: { image: string; name: string; link: string }[] = [
-    { name: "Blogs", image: imageLinks.folder, link: '/blogs' },
-    { name: "Projects", image: imageLinks.folder, link: '/projects' },
-    { name: "Socials", image: imageLinks.folder, link: '/socials' },
-    { name: "Education", image: imageLinks.folder, link: '/education' },
-    { name: "Skills", image: imageLinks.folder, link: '/skills' },
-    { name: "Awards", image: imageLinks.folder, link: '/awards' },
-    { name: "Additional", image: imageLinks.folder, link: '/additional' },
-    { name: "Resume", image: imageLinks.pdf, link: ResumeLink },
+interface SocialLink {
+    name: string;
+    image: string;
+    link: string;
+}
 
-]
+interface ProjectLink {
+    name: string;
+    image: string;
+    deployedLink: string;
+    githubLink: string;
+    pageLink: string;
+}
 
-export const SocialLinks: { name: string; image: string; link: string }[] = [
-    { name: "X", image: './x.svg', link: 'https://twitter.com/ayanalimevv' },
-    { name: "Linkedin", image: './linkedin.svg', link: 'https://www.linkedin.com/in/ayanalimevv' },
-    { name: "Github", image: './github.svg', link: 'https://github.com/alpha2207' },
-    { name: "Medium", image: './medium.svg', link: 'https://medium.com/@ayanalimev' },
-    { name: "Instagram", image: './instagram.svg', link: 'https://medium.com/@ayanalimev' },
-]
+interface EducationDetail {
+    name: string;
+    aboveText: string;
+    image: string;
+    belowText: string;
+}
 
-export const ProjectLinks: { name: string; image: string; deployedLink: string; githubLink: string, pageLink: string }[] = [
-    { name: "YT Music Clone App", image: './music.svg', deployedLink: 'https://medium.com/@ayanalimev', githubLink: "", pageLink: "/yt-music" },
-    { name: "Typing Speed Calculator", image: './typing.svg', deployedLink: 'https://medium.com/@ayanalimev', githubLink: "", pageLink: "" },
-    { name: "Mern Blog Application", image: './blog.svg', deployedLink: 'https://medium.com/@ayanalimev', githubLink: "", pageLink: "" },
-    { name: "FilmSuggest App", image: './movies.svg', deployedLink: 'https://medium.com/@ayanalimev', githubLink: "", pageLink: "" },
-]
+interface SkillDetail {
+    name: string;
+    image: string;
+}
 
-export const EducationDetails: { name: string; image: string; deployedLink: string; githubLink: string, pageLink: string }[] = [
-    { name: "Bachelor of Technology", image: './degree.svg', deployedLink: '', githubLink: "", pageLink: "/college" },
-    { name: "HSC 12th RBSE BOARD", image: './hsc.svg', deployedLink: '', githubLink: "", pageLink: "" },
-    { name: "SSC 10th RBSE BOARD", image: './ssc.svg', deployedLink: '', githubLink: "", pageLink: "" },
-]
+// Utility functions to create components
+const createComponent = (name: string, image: string, link: string): HomePageComponent => ({ name, image, link });
 
-export const SkillsDetails: { name: string; image: string }[] = [
-    { name: "HTML", image: './html.svg' },
-    { name: "CSS", image: './css.svg' },
-    { name: "JS", image: './javascript.svg' },
-    { name: "Typescript", image: './ts.svg' },
-    { name: "Tailwind", image: './tailwind.svg' },
-    { name: "React", image: './react.svg' },
-]
+const createSocialLink = (name: string, image: string, link: string): SocialLink => ({ name, image, link });
 
-export const AwardsDetails: { name: string; image: string; deployedLink: string; githubLink: string, pageLink: string }[] = [
-    { name: "Bachelor of Technology", image: imageLinks.app, deployedLink: 'https://medium.com/@ayanalimev', githubLink: "", pageLink: "" },
-]
+const createProjectLink = (name: string, image: string, deployedLink: string, githubLink: string, pageLink: string): ProjectLink => ({
+    name,
+    image,
+    deployedLink,
+    githubLink,
+    pageLink,
+});
 
-export const AdditionalDetails: { name: string; image: string; deployedLink: string; githubLink: string, pageLink: string }[] = [
-    { name: "Bachelor of Technology", image: imageLinks.app, deployedLink: 'https://medium.com/@ayanalimev', githubLink: "", pageLink: "" },
-]
+const createEducationDetail = (name: string, aboveText: string, image: string, belowText: string): EducationDetail => ({
+    name,
+    aboveText,
+    image,
+    belowText,
+});
+
+const createSkillDetail = (name: string, image: string): SkillDetail => ({ name, image });
+
+// Home Page Components
+export const HomePageComponents: HomePageComponent[] = [
+    createComponent("Blogs", imageLinks.folder, '/blogs'),
+    createComponent("Projects", imageLinks.folder, '/projects'),
+    createComponent("Socials", imageLinks.folder, '/socials'),
+    createComponent("Education", imageLinks.folder, '/education'),
+    createComponent("Skills", imageLinks.folder, '/skills'),
+    createComponent("Awards", imageLinks.folder, '/awards'),
+    createComponent("Additional", imageLinks.folder, '/additional'),
+    createComponent("Resume", imageLinks.pdf, ResumeLink),
+];
+
+// Social Links
+export const SocialLinks: SocialLink[] = [
+    createSocialLink("X", imageLinks.x, 'https://twitter.com/ayanalimevv'),
+    createSocialLink("Linkedin", imageLinks.linkedin, 'https://www.linkedin.com/in/ayanalimevv'),
+    createSocialLink("Github", imageLinks.github, 'https://github.com/alpha2207'),
+    createSocialLink("Medium", imageLinks.medium, 'https://medium.com/@ayanalimev'),
+    createSocialLink("Instagram", imageLinks.x, 'https://instagram.com/ayanalimev'),
+];
+
+// Project Links
+export const ProjectLinks: ProjectLink[] = [
+    createProjectLink("YT Music Clone App", imageLinks.music, 'https://medium.com/@ayanalimev', "", "/yt-music"),
+    createProjectLink("Typing Speed Calculator", imageLinks.typing, 'https://medium.com/@ayanalimev', "", ""),
+    createProjectLink("Mern Blog Application", imageLinks.blog, 'https://medium.com/@ayanalimev', "", ""),
+    createProjectLink("FilmSuggest App", imageLinks.movies, 'https://medium.com/@ayanalimev', "", ""),
+];
+
+// Education Details
+export const EducationDetails: EducationDetail[] = [
+    createEducationDetail("Bachelor of Technology - CSE", '2020 - 2024', imageLinks.degree, 'CGPA: 7.9'),
+    createEducationDetail("HSC 12th RBSE BOARD", '2020', imageLinks.hsc, 'Percentage: 82%'),
+    createEducationDetail("SSC 10th RBSE BOARD", '2018', imageLinks.ssc, 'Percentage: 90%'),
+];
+
+// Skills Details
+export const SkillsDetails: SkillDetail[] = [
+    createSkillDetail("HTML", imageLinks.html),
+    createSkillDetail("CSS", imageLinks.css),
+    createSkillDetail("JS", imageLinks.javascript),
+    createSkillDetail("Typescript", imageLinks.ts),
+    createSkillDetail("Tailwind", imageLinks.tailwind),
+    createSkillDetail("React", imageLinks.react),
+];
+
+// Awards Details
+export const AwardsDetails: EducationDetail[] = [
+    createEducationDetail("#3 in Campus Code Debugging Competition", '2020', imageLinks.degree, 'Got 3rd Position in campus wide coding competition.'),
+];
+
+// Additional Details
+export const AdditionalDetails: EducationDetail[] = [
+    createEducationDetail("Speaker in Google Developer Club Event", '2022', imageLinks.degree, `I had the opportunity to speak on APIs at a GDSC event, engaging with an enthusiastic audience of 100 attendees!`),
+];

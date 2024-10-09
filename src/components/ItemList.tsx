@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom"
 
 
-const ItemList = ({ projectLink, pageLink, projectName, githubLink, imageSource }:
+const ItemList = ({ aboveText, link, projectName, belowText, imageSource }:
     {
-        projectLink?: string;
-        pageLink?: string;
-        githubLink?: string;
+        aboveText?: string;
+        link?: string;
+        belowText?: string;
         projectName: string;
         imageSource?: string;
     }) => {
@@ -14,14 +14,13 @@ const ItemList = ({ projectLink, pageLink, projectName, githubLink, imageSource 
             <img src={imageSource} className="w-8 h-8" alt="" />
             <div className="flex flex-col items-start justify-center text-left ml-4 w-full">
                 <div className="flex justify-end items-center w-full">
-                    <Link to={pageLink ? pageLink : ''}>{projectName}</Link>
-                    <div className="date ml-auto text-xs opacity-50">2020 - 2024</div>
+                    <h1>{projectName}</h1>
+                    <div className="date ml-auto text-xs opacity-50">{aboveText}</div>
                 </div>
-                <span className="text-xs opacity-50 mt-1">CGPA: 7.9</span>
+                <span className="text-xs opacity-50 mt-1">{belowText}</span>
             </div>
             <div className="ml-auto flex gap-4">
-                {githubLink && <Link target="_blank" className="w-4 h-4" to={githubLink}> <img src="./github.svg" className="w-6 h-6" alt="" /></Link>}
-                {projectLink && <Link target="_blank" className="w-4 h-4" to={projectLink}> <img src="./link.svg" className="w-6 h-6" alt="" /></Link>}
+                {link && <Link target="_blank" className="w-4 h-4" to={link}> <img src="./link.svg" className="w-6 h-6" alt="" /></Link>}
             </div>
         </div>
     )

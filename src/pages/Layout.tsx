@@ -1,5 +1,5 @@
 import { ReactNode } from "react"
-import { useLocation } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import BreadCrumbs from "../components/BreadCrumbs"
 
 const Layout = ({ children, isGridLayout }: { children: ReactNode, isGridLayout: boolean }) => {
@@ -17,14 +17,15 @@ const Layout = ({ children, isGridLayout }: { children: ReactNode, isGridLayout:
                             <img onClick={() => history.go(-1)} className='cursor-pointer hover:opacity-80 hover:scale-95 transition-all duration-200' src="./back.svg" width={15} height={15} alt="" />
 
                             <div className="tooltip ml-auto tooltip-left" data-tip="Shut Down">
-                                <a href={'/off'}> <img className='cursor-pointer hover:opacity-80 hover:scale-95 transition-all duration-200' src="./off.svg" width={15} height={15} alt="" />
-                                </a>
+                                <Link to={'/off'}> <img className='cursor-pointer hover:opacity-80 hover:scale-95 transition-all duration-200' src="./off.svg" width={15} height={15} alt="" />
+                                </Link>
                             </div>
                         </>
                     }
                 </div>
 
                 <div className={isGridLayout ? `bg-base-300 p-4 gap-2 grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6` : 'bg-base-300 p-4 flex flex-col gap-2'}>
+
                     {children}
                 </div>
             </div>

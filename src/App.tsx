@@ -10,6 +10,8 @@ import SkillsPage from './pages/SkillsPage';
 import OffScreen from './pages/OffScreen';
 import RedirectToResume from './pages/RedirectToResume';
 import Layout from './pages/Layout';
+import { ItemListPage } from './components/ItemListPage';
+import { AdditionalDetails, AwardsDetails, EducationDetails } from './constants';
 // import AboutPage from './pages/AboutPage';
 // import ContactPage from './pages/ContactPage';
 // import NotFoundPage from './pages/NotFoundPage';
@@ -21,7 +23,9 @@ const App: React.FC = () => {
     { path: '/', component: <HomePage />, isGridLayout: true },
     { path: '/socials', component: <Socials />, isGridLayout: true },
     { path: '/projects', component: <ProjectPage />, isGridLayout: true },
-    { path: '/education', component: <EducationPage />, isGridLayout: false },
+    { path: '/education', component: <EducationPage />, isGridLayout: false, isListLayout: true, array: EducationDetails },
+    { path: '/awards', isGridLayout: false, isListLayout: true, array: AwardsDetails },
+    { path: '/additional', isGridLayout: false, isListLayout: true, array: AdditionalDetails },
     { path: '/skills', component: <SkillsPage />, isGridLayout: true },
     { path: '/off', component: <OffScreen />, isGridLayout: false },
     { path: '/resume', component: <RedirectToResume />, isGridLayout: false },
@@ -32,11 +36,20 @@ const App: React.FC = () => {
     <>
       <Router>
         <Routes>
+
           {urls.map((url, index) => {
-            return <Route key={`url ${index}`} path={url.path} element={<Layout children={url.component} isGridLayout={url.isGridLayout} />} />
+            return (
+              <Route key={`url ${index}`} path={url.path} element={
+                <Layout isGridLayout={url.isGridLayout}>
+                  {url.isListLayout ? <ItemListPage array={url.array} /> : url.component}
+                </Layout>
+              } />
+            )
           })}
+
         </Routes>
       </Router>
+      {/* <span>Happily crafted by <a href="https://linktr.ee/ayanalimevv" className='underline' target='_blank'>@ayanalimevv</a> 💖</span> */}
     </>
   );
 };
