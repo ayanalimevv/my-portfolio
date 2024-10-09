@@ -30,14 +30,16 @@ export const SocialLinks: { name: string; image: string; link: string }[] = [
 ]
 
 export const ProjectLinks: { name: string; image: string; deployedLink: string; githubLink: string, pageLink: string }[] = [
-    { name: "YT Music Clone App", image: imageLinks.app, deployedLink: 'https://medium.com/@ayanalimev', githubLink: "", pageLink: "" },
-    { name: "Typing Speed Calculator", image: imageLinks.app, deployedLink: 'https://medium.com/@ayanalimev', githubLink: "", pageLink: "" },
-    { name: "Blog App", image: imageLinks.app, deployedLink: 'https://medium.com/@ayanalimev', githubLink: "", pageLink: "" },
-    { name: "Movies Recommendation App", image: imageLinks.app, deployedLink: 'https://medium.com/@ayanalimev', githubLink: "", pageLink: "" },
+    { name: "YT Music Clone App", image: './music.svg', deployedLink: 'https://medium.com/@ayanalimev', githubLink: "", pageLink: "" },
+    { name: "Typing Speed Calculator", image: './typing.svg', deployedLink: 'https://medium.com/@ayanalimev', githubLink: "", pageLink: "" },
+    { name: "Mern Blog Application", image: './blog.svg', deployedLink: 'https://medium.com/@ayanalimev', githubLink: "", pageLink: "" },
+    { name: "FilmSuggest App", image: './movies.svg', deployedLink: 'https://medium.com/@ayanalimev', githubLink: "", pageLink: "" },
 ]
 
 export const EducationDetails: { name: string; image: string; deployedLink: string; githubLink: string, pageLink: string }[] = [
     { name: "Bachelor of Technology", image: imageLinks.app, deployedLink: 'https://medium.com/@ayanalimev', githubLink: "", pageLink: "" },
+    { name: "HSC 12th RBSE BOARD", image: imageLinks.app, deployedLink: 'https://medium.com/@ayanalimev', githubLink: "", pageLink: "" },
+    { name: "SSC 10th RBSE BOARD", image: imageLinks.app, deployedLink: 'https://medium.com/@ayanalimev', githubLink: "", pageLink: "" },
 ]
 
 export const SkillsDetails: { name: string; image: string }[] = [

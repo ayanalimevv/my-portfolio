@@ -1,7 +1,15 @@
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
-<!-- Uploaded to: SVG Repo, www.svgrepo.com, Transformed by: SVG Repo Mixer Tools -->
-<svg version="1.1" id="Icons" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" xml:space="preserve" width="800px" height="800px" fill="#ffffff">
-<g id="SVGRepo_bgCarrier" stroke-width="0"/>
-<g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"/>
-<g id="SVGRepo_iconCarrier"> <style type="text/css"> .st0{fill:none;stroke:#e7ff70;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;} </style> <circle class="st0" cx="22" cy="19" r="4"/> <polyline class="st0" points="25,22 25,31 22,30 19,31 19,22 "/> <line class="st0" x1="7" y1="11" x2="18" y2="11"/> <line class="st0" x1="7" y1="15" x2="12" y2="15"/> <polyline class="st0" points="19,26 3,26 3,6 29,6 29,26 25,26 "/> </g>
-</svg>
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_8433_436)">
+<path d="M24 48C37.2548 48 48 37.2548 48 24C48 10.7452 37.2548 0 24 0C10.7452 0 0 10.7452 0 24C0 37.2548 10.7452 48 24 48Z" fill="#45B39C"/>
+<path opacity="0.1" d="M11.6973 11.6996C10.4223 12.9746 9.88727 14.5046 10.5073 15.1245L10.5123 15.1295L20.9273 25.5445L18.1823 28.2895L35.1462 45.2535C38.2752 43.609 40.9967 41.2965 43.1198 38.502L15.1223 10.5045C14.5074 9.88955 12.9723 10.4246 11.6973 11.6996Z" fill="white"/>
+<path d="M11.6982 11.6976C10.4234 12.9725 9.88993 14.506 10.5068 15.1228C11.1236 15.7396 12.6571 15.2062 13.9319 13.9314C15.2068 12.6565 15.7402 11.123 15.1234 10.5062C14.5065 9.88935 12.973 10.4228 11.6982 11.6976Z" fill="#EBF0F3"/>
+<path d="M32.9068 37.523L10.5127 15.129C11.8087 16.425 16.4252 11.8085 15.1292 10.5125L37.5232 32.9064C38.8192 34.2025 34.2028 38.819 32.9068 37.523Z" fill="#D5D6DB"/>
+<path d="M28.1088 23.4925L25.5443 20.928C23.9993 23.053 23.0543 23.998 20.9277 25.5445L23.4923 28.109C25.5219 26.5975 26.5989 25.5229 28.1088 23.4925Z" fill="#E56353"/>
+<path d="M20.7191 30.8235L20.1116 28.8956L18.1841 28.2885L20.9281 25.5446L23.4631 28.0796L20.7191 30.8235Z" fill="#D15241"/>
+</g>
+<defs>
+<clipPath id="clip0_8433_436">
+<rect width="48" height="48" fill="white"/>
+</clipPath>
+</defs>
+</svg>

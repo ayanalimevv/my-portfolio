@@ -8,6 +8,8 @@ import NotFound from './pages/NotFound';
 import EducationPage from './pages/EducationPage';
 import SkillsPage from './pages/SkillsPage';
 import OffScreen from './pages/OffScreen';
+import RedirectToResume from './pages/RedirectToResume';
+import Layout from './pages/Layout';
 // import AboutPage from './pages/AboutPage';
 // import ContactPage from './pages/ContactPage';
 // import NotFoundPage from './pages/NotFoundPage';
@@ -15,40 +17,26 @@ import OffScreen from './pages/OffScreen';
 const App: React.FC = () => {
   console.log(location.pathname
   );
+  const urls = [
+    { path: '/', component: <HomePage />, isGridLayout: true },
+    { path: '/socials', component: <Socials />, isGridLayout: true },
+    { path: '/projects', component: <ProjectPage />, isGridLayout: true },
+    { path: '/education', component: <EducationPage />, isGridLayout: false },
+    { path: '/skills', component: <SkillsPage />, isGridLayout: true },
+    { path: '/off', component: <OffScreen />, isGridLayout: false },
+    { path: '/resume', component: <RedirectToResume />, isGridLayout: false },
+    { path: '*', component: <NotFound />, isGridLayout: false }
+  ];
 
   return (
     <>
-      <div className='flex justify-center items-center min-h-[90vh]'>
-        <div className="mockup-browser bg-base-300 border">
-          <div className="mockup-browser-toolbar">
-            <div className="input">{`ayanali.com`}</div>
-          </div>
-          {/* {!excludedRoutes.includes(location.pathname) && */}
-          <div className='flex gap-6 pb-4 px-4 pt-2'>
-            {location.pathname === "/off" || <>
-              <img onClick={() => history.go(-1)} className='cursor-pointer hover:opacity-80 hover:scale-95 transition-all duration-200' src="./back.svg" width={15} height={15} alt="" />
-
-              <div className="tooltip ml-auto tooltip-left" data-tip="Shut Down">
-                <a href={'/off'}> <img className='cursor-pointer hover:opacity-80 hover:scale-95 transition-all duration-200' src="./off.svg" width={15} height={15} alt="" />
-                </a>
-              </div>
-            </>}
-          </div>
-          {/* } */}
-
-          <Router>
-            <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/socials" element={<Socials />} />
-              <Route path="/projects" element={<ProjectPage />} />
-              <Route path="/education" element={<EducationPage />} />
-              <Route path="/skills" element={<SkillsPage />} />
-              <Route path="/off" element={<OffScreen />} />
-              <Route path="*" element={<NotFound />} />
-            </Routes>
-          </Router>
-        </div>
-      </div>
+      <Router>
+        <Routes>
+          {urls.map(url => {
+            return <Route path={url.path} element={<Layout children={url.component} isGridLayout={url.isGridLayout} />} />
+          })}
+        </Routes>
+      </Router>
     </>
   );
 };
