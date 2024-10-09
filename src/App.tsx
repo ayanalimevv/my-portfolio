@@ -25,15 +25,15 @@ const App: React.FC = () => {
     { path: '/skills', component: <SkillsPage />, isGridLayout: true },
     { path: '/off', component: <OffScreen />, isGridLayout: false },
     { path: '/resume', component: <RedirectToResume />, isGridLayout: false },
-    { path: '*', component: <NotFound />, isGridLayout: false }
+    { path: '*', component: <NotFound />, isGridLayout: false },
   ];
 
   return (
     <>
       <Router>
         <Routes>
-          {urls.map(url => {
-            return <Route path={url.path} element={<Layout children={url.component} isGridLayout={url.isGridLayout} />} />
+          {urls.map((url, index) => {
+            return <Route key={`url ${index}`} path={url.path} element={<Layout children={url.component} isGridLayout={url.isGridLayout} />} />
           })}
         </Routes>
       </Router>

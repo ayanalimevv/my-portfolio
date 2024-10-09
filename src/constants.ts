@@ -27,19 +27,20 @@ export const SocialLinks: { name: string; image: string; link: string }[] = [
     { name: "Linkedin", image: './linkedin.svg', link: 'https://www.linkedin.com/in/ayanalimevv' },
     { name: "Github", image: './github.svg', link: 'https://github.com/alpha2207' },
     { name: "Medium", image: './medium.svg', link: 'https://medium.com/@ayanalimev' },
+    { name: "Instagram", image: './instagram.svg', link: 'https://medium.com/@ayanalimev' },
 ]
 
 export const ProjectLinks: { name: string; image: string; deployedLink: string; githubLink: string, pageLink: string }[] = [
-    { name: "YT Music Clone App", image: './music.svg', deployedLink: 'https://medium.com/@ayanalimev', githubLink: "", pageLink: "" },
+    { name: "YT Music Clone App", image: './music.svg', deployedLink: 'https://medium.com/@ayanalimev', githubLink: "", pageLink: "/yt-music" },
     { name: "Typing Speed Calculator", image: './typing.svg', deployedLink: 'https://medium.com/@ayanalimev', githubLink: "", pageLink: "" },
     { name: "Mern Blog Application", image: './blog.svg', deployedLink: 'https://medium.com/@ayanalimev', githubLink: "", pageLink: "" },
     { name: "FilmSuggest App", image: './movies.svg', deployedLink: 'https://medium.com/@ayanalimev', githubLink: "", pageLink: "" },
 ]
 
 export const EducationDetails: { name: string; image: string; deployedLink: string; githubLink: string, pageLink: string }[] = [
-    { name: "Bachelor of Technology", image: './degree.svg', deployedLink: 'https://medium.com/@ayanalimev', githubLink: "", pageLink: "" },
-    { name: "HSC 12th RBSE BOARD", image: './hsc.svg', deployedLink: 'https://medium.com/@ayanalimev', githubLink: "", pageLink: "" },
-    { name: "SSC 10th RBSE BOARD", image: './ssc.svg', deployedLink: 'https://medium.com/@ayanalimev', githubLink: "", pageLink: "" },
+    { name: "Bachelor of Technology", image: './degree.svg', deployedLink: '', githubLink: "", pageLink: "/college" },
+    { name: "HSC 12th RBSE BOARD", image: './hsc.svg', deployedLink: '', githubLink: "", pageLink: "" },
+    { name: "SSC 10th RBSE BOARD", image: './ssc.svg', deployedLink: '', githubLink: "", pageLink: "" },
 ]
 
 export const SkillsDetails: { name: string; image: string }[] = [
