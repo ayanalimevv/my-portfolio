@@ -10,7 +10,7 @@ const ItemList = ({ projectLink, pageLink, projectName, githubLink, imageSource 
         imageSource?: string;
     }) => {
     return (
-        <div className="w-full bg-slate-800 p-2 rounded flex items-center bg-opacity-70 hover:bg-opacity-75 hover:-translate-x-1 hover:scale-[1.01] hover:shadow transition-all duration-200 cursor-pointer">
+        <div className="w-full bg-white bg-opacity-0 border border-white border-opacity-10 p-2 rounded flex items-center  hover:bg-opacity-5 hover:-translate-x-1 hover:scale-[1.01] hover:border-opacity-20 hover:shadow transition-all duration-200 cursor-pointer">
             <img src={imageSource} className="w-8 h-8" alt="" />
             <div className="flex flex-col items-start justify-center text-left ml-4">
                 <Link to={pageLink ? pageLink : ''}>{projectName}</Link>

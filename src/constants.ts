@@ -37,9 +37,9 @@ export const ProjectLinks: { name: string; image: string; deployedLink: string; 
 ]
 
 export const EducationDetails: { name: string; image: string; deployedLink: string; githubLink: string, pageLink: string }[] = [
-    { name: "Bachelor of Technology", image: imageLinks.app, deployedLink: 'https://medium.com/@ayanalimev', githubLink: "", pageLink: "" },
-    { name: "HSC 12th RBSE BOARD", image: imageLinks.app, deployedLink: 'https://medium.com/@ayanalimev', githubLink: "", pageLink: "" },
-    { name: "SSC 10th RBSE BOARD", image: imageLinks.app, deployedLink: 'https://medium.com/@ayanalimev', githubLink: "", pageLink: "" },
+    { name: "Bachelor of Technology", image: './degree.svg', deployedLink: 'https://medium.com/@ayanalimev', githubLink: "", pageLink: "" },
+    { name: "HSC 12th RBSE BOARD", image: './hsc.svg', deployedLink: 'https://medium.com/@ayanalimev', githubLink: "", pageLink: "" },
+    { name: "SSC 10th RBSE BOARD", image: './ssc.svg', deployedLink: 'https://medium.com/@ayanalimev', githubLink: "", pageLink: "" },
 ]
 
 export const SkillsDetails: { name: string; image: string }[] = [

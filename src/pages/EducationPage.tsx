@@ -6,7 +6,7 @@ const EducationPage = () => {
         <>
             {EducationDetails.map(app => {
                 return (
-                    <ItemList imageSource='./degree.svg' projectName={app.name} projectLink={app.deployedLink} githubLink={app.githubLink} pageLink={app.pageLink} />
+                    <ItemList imageSource={app.image} projectName={app.name} projectLink={app.deployedLink} githubLink={app.githubLink} pageLink={app.pageLink} />
                 )
             })}
 
