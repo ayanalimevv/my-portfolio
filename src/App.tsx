@@ -5,7 +5,6 @@ import HomePage from './pages/HomePage';
 import Socials from './pages/SocialsPage';
 import ProjectPage from './pages/ProjectsPage';
 import NotFound from './pages/NotFound';
-import EducationPage from './pages/EducationPage';
 import SkillsPage from './pages/SkillsPage';
 import OffScreen from './pages/OffScreen';
 import RedirectToResume from './pages/RedirectToResume';
@@ -23,7 +22,7 @@ const App: React.FC = () => {
     { path: '/', component: <HomePage />, isGridLayout: true },
     { path: '/socials', component: <Socials />, isGridLayout: true },
     { path: '/projects', component: <ProjectPage />, isGridLayout: true },
-    { path: '/education', component: <EducationPage />, isGridLayout: false, isListLayout: true, array: EducationDetails },
+    { path: '/education', isGridLayout: false, isListLayout: true, array: EducationDetails },
     { path: '/awards', isGridLayout: false, isListLayout: true, array: AwardsDetails },
     { path: '/additional', isGridLayout: false, isListLayout: true, array: AdditionalDetails },
     { path: '/skills', component: <SkillsPage />, isGridLayout: true },
