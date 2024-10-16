@@ -6,7 +6,7 @@
 }
 
 .mockup-browser .mockup-browser-toolbar:before {
-  content: '&#8592;'
+  content: "&#8592;";
 }
 
 .mockup-browser .mockup-browser-toolbar .input {
