@@ -19,7 +19,7 @@ export const ListInfo = ({
           <h1>{projectName}</h1>
           <div className="date ml-auto text-xs opacity-50">{aboveText}</div>
         </div>
-        <span className="text-xs opacity-50 mt-1">{belowText}</span>
+        <span className="text-xs opacity-80 bg-slate-600 p-1 bg-opacity-20 rounded mt-1">{belowText}</span>
       </div>
       <div className="ml-auto flex gap-4">
         {link && (
