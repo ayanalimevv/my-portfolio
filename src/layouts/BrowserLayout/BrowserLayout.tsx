@@ -12,7 +12,7 @@ export const BrowserLayout = ({
 }) => {
   return (
     <div className="flex justify-center items-center min-h-[90vh]">
-      <div className="mockup-browser bg-base-300 border border-slate-600 lg:min-w-[600px] lg:min-h-[400px] shadow-lg">
+      <div className="mockup-browser bg-base-300 border border-slate-600 lg:w-[600px] lg:min-h-[400px] shadow-lg">
         
         {/* Component that renders very top of the browser window which contains breadcrumbs for navigation */}
         <BrowserBreadCrumbsBar />

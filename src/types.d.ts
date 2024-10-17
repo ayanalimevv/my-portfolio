@@ -5,3 +5,13 @@ export type List = {
   aboveText?: string;
   belowText?: string;
 };
+
+export type pageType =
+  | "home"
+  | "socials"
+  | "skills"
+  | "additional"
+  | "blogs"
+  | "projects"
+  | "education"
+  | "awards";
