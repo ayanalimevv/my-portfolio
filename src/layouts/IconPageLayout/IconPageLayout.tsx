@@ -1,14 +1,14 @@
 import { Icon } from "../../components/Icon/Icon";
 
 function IconPageLayout({
-  array,
+  itemsToRender,
 }: {
-  array: { image: string; name: string; link?: string }[];
+  itemsToRender: { image: string; name: string; link?: string }[];
 }) {
   return (
     <>
-      {array.map((app) => {
-        return <Icon imagePath={app.image} text={app.name} link={app.link} />;
+      {itemsToRender.map((item) => {
+        return <Icon imagePath={item.image} text={item.name} link={item.link} />;
       })}
     </>
   );
