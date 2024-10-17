@@ -1,4 +1,4 @@
-export const ResumeLink = "https://drive.google.com/file/d/1U8daZXQEkn8GSiQo5P-Nb6yhiw_eGXZe/view";
+export const ResumeLink = "https://drive.google.com/file/d/1lDxyCMjpLeAvfGqBzfbt9iUGFkGyjuS1/view";
 
 const imageLinks = {
     folder: "./folder_icon.svg",
