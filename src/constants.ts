@@ -92,16 +92,16 @@ export const SocialLinks = [
     imageLinks.linkedin,
     "https://www.linkedin.com/in/ayanalimevv"
   ),
-  createSocialLink("Github", imageLinks.github, "https://github.com/alpha2207"),
+  createSocialLink("Github", imageLinks.github, "https://github.com/ayanalimevv"),
   createSocialLink(
     "Medium",
     imageLinks.medium,
-    "https://medium.com/@ayanalimev"
+    "https://medium.com/@ayanalimevv"
   ),
   createSocialLink(
     "Instagram",
     imageLinks.instagram,
-    "https://instagram.com/ayanalimev"
+    "https://instagram.com/ayanalimevv"
   ),
 ];
 
