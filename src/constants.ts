@@ -22,6 +22,7 @@ const imageLinks = {
   ts: "./ts.svg",
   tailwind: "./tailwind.svg",
   react: "./react.svg",
+  instagram: "./instagram.svg",
 };
 
 // Utility functions to create components
@@ -41,14 +42,12 @@ const createProjectLink = (
   name: string,
   image: string,
   deployedLink: string,
-  githubLink: string,
-  pageLink: string
+  githubLink: string
 ) => ({
   name,
   image,
   deployedLink,
   githubLink,
-  pageLink,
 });
 
 const createEducationDetail = (
@@ -101,7 +100,7 @@ export const SocialLinks = [
   ),
   createSocialLink(
     "Instagram",
-    imageLinks.x,
+    imageLinks.instagram,
     "https://instagram.com/ayanalimev"
   ),
 ];
@@ -119,30 +118,20 @@ export const ProjectLinks = [
   createProjectLink(
     "YT Music Clone App",
     imageLinks.music,
-    "https://medium.com/@ayanalimev",
-    "",
-    "/yt-music"
-  ),
-  createProjectLink(
-    "Typing Speed Calculator",
-    imageLinks.typing,
-    "https://medium.com/@ayanalimev",
-    "",
-    ""
+    "https://alpha-yt-music.vercel.app/",
+    "https://github.com/ayanalimevv/yt-music",
   ),
   createProjectLink(
     "Mern Blog Application",
     imageLinks.blog,
-    "https://medium.com/@ayanalimev",
+    "https://alpha-blog-frontend.vercel.app/",
     "",
-    ""
   ),
   createProjectLink(
     "FilmSuggest App",
     imageLinks.movies,
-    "https://medium.com/@ayanalimev",
-    "",
-    ""
+    "https://alphaflix-three.vercel.app/",
+    "https://github.com/ayanalimevv/alphaflix",
   ),
 ];
 

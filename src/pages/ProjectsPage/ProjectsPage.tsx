@@ -1,3 +1,4 @@
+import DropdownMenu from "../../components/DropdownMenu";
 import { Icon } from "../../components/Icon";
 import { ProjectLinks } from "../../constants";
 
@@ -10,6 +11,7 @@ function ProjectPage() {
             <div tabIndex={0} role="button">
               <Icon key={index} image={app.image} text={app.name} />
             </div>
+            <DropdownMenu githubLink={app?.githubLink} deployedLink={app?.deployedLink} />
           </div>
         );
       })}
