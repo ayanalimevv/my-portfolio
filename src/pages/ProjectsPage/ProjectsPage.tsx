@@ -1,4 +1,4 @@
-import DropdownMenu from "../../components/DropdownMenu";
+import DropdownMenu from "../../components/DropdownMenu/DropdownMenu";
 import { Icon } from "../../components/Icon";
 import { ProjectLinks } from "../../constants";
 
