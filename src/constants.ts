@@ -178,7 +178,6 @@ export const AwardsDetails = [
 ];
 
 // Additional Details
-
 export const AdditionalDetails = [
   createEducationDetail(
     "Speaker in Google Developer Club Event",
@@ -186,7 +185,4 @@ export const AdditionalDetails = [
     imageLinks.degree,
     `I had the opportunity to speak on APIs at a GDSC event, engaging with an enthusiastic audience of 100 attendees!`
   ),
-=======
-export const AdditionalDetails: EducationDetail[] = [
-    createEducationDetail("Speaker in Google Developer Club Event", '2022', imageLinks.degree, `I had the opportunity to speak on APIs at a GDSC event, engaging with an enthusiastic audience of 100 attendees!`),
 ];
