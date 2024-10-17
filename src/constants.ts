@@ -1,3 +1,5 @@
+import { List } from "./types";
+
 export const ResumeLink =
   "https://drive.google.com/file/d/1rbg-OYf_NH2Kq0Zzc0zb_-mDvDvAA2Ec/view";
 
@@ -92,7 +94,11 @@ export const SocialLinks = [
     imageLinks.linkedin,
     "https://www.linkedin.com/in/ayanalimevv"
   ),
-  createSocialLink("Github", imageLinks.github, "https://github.com/ayanalimevv"),
+  createSocialLink(
+    "Github",
+    imageLinks.github,
+    "https://github.com/ayanalimevv"
+  ),
   createSocialLink(
     "Medium",
     imageLinks.medium,
@@ -119,24 +125,24 @@ export const ProjectLinks = [
     "YT Music Clone App",
     imageLinks.music,
     "https://alpha-yt-music.vercel.app/",
-    "https://github.com/ayanalimevv/yt-music",
+    "https://github.com/ayanalimevv/yt-music"
   ),
   createProjectLink(
     "Mern Blog Application",
     imageLinks.blog,
     "https://alpha-blog-frontend.vercel.app/",
-    "",
+    ""
   ),
   createProjectLink(
     "FilmSuggest App",
     imageLinks.movies,
     "https://alphaflix-three.vercel.app/",
-    "https://github.com/ayanalimevv/alphaflix",
+    "https://github.com/ayanalimevv/alphaflix"
   ),
 ];
 
 // Education Details
-export const EducationDetails = [
+export const EducationDetails: List[] = [
   createEducationDetail(
     "Bachelor of Technology - CSE",
     "2020 - 2024",
@@ -168,7 +174,7 @@ export const SkillsDetails = [
 ];
 
 // Awards Details
-export const AwardsDetails = [
+export const AwardsDetails: List[] = [
   createEducationDetail(
     "#3 in Campus Code Debugging Competition",
     "2020",
@@ -178,7 +184,7 @@ export const AwardsDetails = [
 ];
 
 // Additional Details
-export const AdditionalDetails = [
+export const AdditionalDetails: List[] = [
   createEducationDetail(
     "Speaker in Google Developer Club Event",
     "2022",

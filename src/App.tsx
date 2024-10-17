@@ -6,8 +6,6 @@ import ProjectPage from "./pages/ProjectsPage";
 import NotFound from "./pages/NotFoundPage/NotFoundPage";
 import OffScreen from "./pages/OffScreenPage";
 import RedirectToResume from "./pages/RedirectToResumePage";
-import { BrowserLayout } from "./layouts/BrowserLayout/BrowserLayout";
-import { ItemListPage } from "./layouts/ListPageLayout";
 import {
   AdditionalDetails,
   AwardsDetails,
@@ -17,6 +15,7 @@ import {
   SocialLinks,
 } from "./constants";
 import IconPageLayout from "./layouts/IconPageLayout/IconPageLayout";
+import { RouteRenderer } from "./components/RouteRenderer";
 
 const App: React.FC = () => {
   // All the urls and component to render array
@@ -72,19 +71,17 @@ const App: React.FC = () => {
     <>
       <Router>
         <Routes>
-          {routes.map((route, index) => {
+          {routes.map((route) => {
             return (
               <Route
-                key={`url ${index}`}
+                key={`url`}
                 path={route.path}
                 element={
-                  <BrowserLayout isPageRenderList={route.isPageRenderList}>
-                    {route.isPageRenderList ? (
-                      <ItemListPage array={route.array} />
-                    ) : (
-                      route.component
-                    )}
-                  </BrowserLayout>
+                  <RouteRenderer
+                    isPageRenderList={route.isPageRenderList}
+                    IconComponent={route.component}
+                    ItemArray={route.array}
+                  />
                 }
               />
             );
