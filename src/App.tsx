@@ -6,7 +6,7 @@ import ProjectPage from "./pages/ProjectsPage";
 import NotFound from "./pages/NotFoundPage/NotFoundPage";
 import OffScreen from "./pages/OffScreenPage";
 import RedirectToResume from "./pages/RedirectToResumePage";
-import Layout from "./layouts/Layout";
+import { BrowserLayout } from "./layouts/BrowserLayout/BrowserLayout";
 import { ItemListPage } from "./layouts/ListPageLayout";
 import {
   AdditionalDetails,
@@ -54,7 +54,11 @@ const App: React.FC = () => {
       array: AdditionalDetails,
       isPageRenderList: true,
     },
-    { path: "/skills", component: <IconPageLayout array={SkillsDetails} />, isPageRenderList: false },
+    {
+      path: "/skills",
+      component: <IconPageLayout array={SkillsDetails} />,
+      isPageRenderList: false,
+    },
     { path: "/off", component: <OffScreen />, isPageRenderList: false },
     {
       path: "/resume",
@@ -74,13 +78,13 @@ const App: React.FC = () => {
                 key={`url ${index}`}
                 path={route.path}
                 element={
-                  <Layout isPageRenderList={route.isPageRenderList}>
+                  <BrowserLayout isPageRenderList={route.isPageRenderList}>
                     {route.isPageRenderList ? (
                       <ItemListPage array={route.array} />
                     ) : (
                       route.component
                     )}
-                  </Layout>
+                  </BrowserLayout>
                 }
               />
             );

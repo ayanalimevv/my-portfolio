@@ -1,23 +1,19 @@
 import { Link } from "react-router-dom";
 
-export const ItemList = ({
-  aboveText,
-  link,
+{/*  Render All text Info part in List */}
+export const ListInfo = ({
   projectName,
+  aboveText,
   belowText,
-  imageSource,
+  link,
 }: {
-  aboveText?: string;
-  link?: string;
-  belowText?: string;
   projectName: string;
-  imageSource?: string;
+  aboveText?: string;
+  belowText?: string;
+  link?: string;
 }) => {
   return (
-    <div className="w-full bg-white bg-opacity-0 border border-white border-opacity-10 p-2 rounded flex items-center  hover:bg-opacity-5 hover:-translate-x-1 hover:scale-[1.01] hover:border-opacity-20 hover:shadow transition-all duration-200 cursor-pointer">
-      <img src={imageSource} className="w-8 h-8" alt="" />
-
-      
+    <>
       <div className="flex flex-col items-start justify-center text-left ml-4 w-full">
         <div className="flex justify-end items-center w-full">
           <h1>{projectName}</h1>
@@ -33,6 +29,6 @@ export const ItemList = ({
           </Link>
         )}
       </div>
-    </div>
+    </>
   );
 };

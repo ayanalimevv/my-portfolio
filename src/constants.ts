@@ -1,5 +1,5 @@
 export const ResumeLink =
-  "https://drive.google.com/file/d/1U8daZXQEkn8GSiQo5P-Nb6yhiw_eGXZe/view";
+  "https://drive.google.com/file/d/1rbg-OYf_NH2Kq0Zzc0zb_-mDvDvAA2Ec/view";
 
 const imageLinks = {
   folder: "./folder_icon.svg",

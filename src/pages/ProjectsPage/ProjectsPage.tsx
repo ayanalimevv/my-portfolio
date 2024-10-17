@@ -1,5 +1,5 @@
 import DropdownMenu from "../../components/DropdownMenu/DropdownMenu";
-import { Icon } from "../../components/Icon";
+import { Icon } from "../../components/Icon/Icon";
 import { ProjectLinks } from "../../constants";
 
 function ProjectPage() {
@@ -9,7 +9,7 @@ function ProjectPage() {
         return (
           <div key={index} className="dropdown dropdown-right">
             <div tabIndex={0} role="button">
-              <Icon key={index} image={app.image} text={app.name} />
+              <Icon key={index} imagePath={app.image} text={app.name} />
             </div>
             <DropdownMenu githubLink={app?.githubLink} deployedLink={app?.deployedLink} />
           </div>

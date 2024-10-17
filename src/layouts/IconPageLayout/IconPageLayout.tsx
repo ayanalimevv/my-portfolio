@@ -1,4 +1,4 @@
-import { Icon } from "../../components/Icon";
+import { Icon } from "../../components/Icon/Icon";
 
 function IconPageLayout({
   array,
@@ -8,7 +8,7 @@ function IconPageLayout({
   return (
     <>
       {array.map((app) => {
-        return <Icon image={app.image} text={app.name} link={app.link} />;
+        return <Icon imagePath={app.image} text={app.name} link={app.link} />;
       })}
     </>
   );

@@ -1,4 +1,4 @@
-import { ItemList } from "../components/List";
+import { List } from "../components/List/List";
 
 // Create a array and render ItemList component from that.
 export const ItemListPage = ({
@@ -14,17 +14,21 @@ export const ItemListPage = ({
 }) => {
   return (
     <>
-      {array ? array.map((app) => {
-        return (
-          <ItemList
-            imageSource={app.image}
-            projectName={app.name}
-            link={app.link}
-            aboveText={app.aboveText}
-            belowText={app.belowText}
-          />
-        );
-      }) : <p>Nothing to Show...</p>}
+      {array ? (
+        array.map((item) => {
+          return (
+            <List
+              imageSource={item.image}
+              projectName={item.name}
+              link={item.link}
+              aboveText={item.aboveText}
+              belowText={item.belowText}
+            />
+          );
+        })
+      ) : (
+        <p>Nothing to Show...</p>
+      )}
     </>
   );
 };
