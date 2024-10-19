@@ -28,19 +28,13 @@ const imageLinks = {
 };
 
 // Utility functions to create components
-const createComponent = (name: string, image: string, link: string) => ({
+const createIconItemsDetail = (name: string, image: string, link: string) => ({
   name,
   image,
   link,
 });
 
-const createSocialLink = (name: string, image: string, link: string) => ({
-  name,
-  image,
-  link,
-});
-
-const createProjectLink = (
+const createProjectItemsDetail = (
   name: string,
   image: string,
   deployedLink: string,
@@ -52,7 +46,7 @@ const createProjectLink = (
   githubLink,
 });
 
-const createEducationDetail = (
+const createListItemsDetail = (
   name: string,
   aboveText: string,
   image: string,
@@ -71,15 +65,15 @@ const createSkillDetail = (name: string, image: string) => ({
 
 // Home Page Components
 export const HomePageComponents = [
-  createComponent("Blogs", imageLinks.folder, "/blogs"),
-  createComponent("Projects", imageLinks.folder, "/projects"),
-  createComponent("Socials", imageLinks.folder, "/socials"),
-  createComponent("Education", imageLinks.folder, "/education"),
-  createComponent("Skills", imageLinks.folder, "/skills"),
-  createComponent("Awards", imageLinks.folder, "/awards"),
-  createComponent("Additional", imageLinks.folder, "/additional"),
-  createComponent("Resume", imageLinks.pdf, ResumeLink),
-  createComponent(
+  createIconItemsDetail("Blogs", imageLinks.folder, "/blogs"),
+  createIconItemsDetail("Projects", imageLinks.folder, "/projects"),
+  createIconItemsDetail("Socials", imageLinks.folder, "/socials"),
+  createIconItemsDetail("Education", imageLinks.folder, "/education"),
+  createIconItemsDetail("Skills", imageLinks.folder, "/skills"),
+  createIconItemsDetail("Awards", imageLinks.folder, "/awards"),
+  createIconItemsDetail("Additional", imageLinks.folder, "/additional"),
+  createIconItemsDetail("Resume", imageLinks.pdf, ResumeLink),
+  createIconItemsDetail(
     "Mail Me",
     "./mail.svg",
     `mailto:ayanalimevv@gmail.com,ayan787ali.mev@gmail.com`
@@ -88,23 +82,23 @@ export const HomePageComponents = [
 
 // Social Links
 export const SocialLinks = [
-  createSocialLink("X", imageLinks.x, "https://twitter.com/ayanalimevv"),
-  createSocialLink(
+  createIconItemsDetail("X", imageLinks.x, "https://twitter.com/ayanalimevv"),
+  createIconItemsDetail(
     "Linkedin",
     imageLinks.linkedin,
     "https://www.linkedin.com/in/ayanalimevv"
   ),
-  createSocialLink(
+  createIconItemsDetail(
     "Github",
     imageLinks.github,
     "https://github.com/ayanalimevv"
   ),
-  createSocialLink(
+  createIconItemsDetail(
     "Medium",
     imageLinks.medium,
     "https://medium.com/@ayanalimevv"
   ),
-  createSocialLink(
+  createIconItemsDetail(
     "Instagram",
     imageLinks.instagram,
     "https://instagram.com/ayanalimevv"
@@ -112,7 +106,7 @@ export const SocialLinks = [
 ];
 
 export const BlogLinks = [
-  createSocialLink(
+  createIconItemsDetail(
     "You Won’t Believe How Fast I Built This Typing Speed App in React!",
     "./blog.svg",
     "https://medium.com/@ayanalimevv/you-wont-believe-how-fast-i-built-this-typing-speed-app-in-react-0d466cbb5f59"
@@ -121,19 +115,19 @@ export const BlogLinks = [
 
 // Project Links
 export const ProjectLinks = [
-  createProjectLink(
+  createProjectItemsDetail(
     "YT Music Clone App",
     imageLinks.music,
     "https://alpha-yt-music.vercel.app/",
     "https://github.com/ayanalimevv/yt-music"
   ),
-  createProjectLink(
-    "Mern Blog Application",
+  createProjectItemsDetail(
+    "MERN Blog Application",
     imageLinks.blog,
     "https://alpha-blog-frontend.vercel.app/",
     ""
   ),
-  createProjectLink(
+  createProjectItemsDetail(
     "FilmSuggest App",
     imageLinks.movies,
     "https://alphaflix-three.vercel.app/",
@@ -143,19 +137,19 @@ export const ProjectLinks = [
 
 // Education Details
 export const EducationDetails: List[] = [
-  createEducationDetail(
+  createListItemsDetail(
     "Bachelor of Technology - CSE",
     "2020 - 2024",
     imageLinks.degree,
     "CGPA: 7.9"
   ),
-  createEducationDetail(
+  createListItemsDetail(
     "HSC 12th RBSE BOARD",
     "2020",
     imageLinks.hsc,
     "Percentage: 82%"
   ),
-  createEducationDetail(
+  createListItemsDetail(
     "SSC 10th RBSE BOARD",
     "2018",
     imageLinks.ssc,
@@ -175,7 +169,7 @@ export const SkillsDetails = [
 
 // Awards Details
 export const AwardsDetails: List[] = [
-  createEducationDetail(
+  createListItemsDetail(
     "#3 in Campus Code Debugging Competition",
     "2020",
     imageLinks.degree,
@@ -185,7 +179,7 @@ export const AwardsDetails: List[] = [
 
 // Additional Details
 export const AdditionalDetails: List[] = [
-  createEducationDetail(
+  createListItemsDetail(
     "Speaker in Google Developer Club Event",
     "2022",
     imageLinks.degree,

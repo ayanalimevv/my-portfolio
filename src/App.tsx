@@ -1,10 +1,10 @@
 // App.tsx
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
-import HomePage from "./pages/HomePage";
+import HomePage from "./pages/HomePage/HomePage";
 import ProjectPage from "./pages/ProjectsPage";
 import NotFound from "./pages/NotFoundPage/NotFoundPage";
-import OffScreen from "./pages/OffScreenPage";
+import OffScreen from "./pages/OffScreenPage/OffScreenPage";
 import RedirectToResume from "./pages/RedirectToResumePage";
 import {
   AdditionalDetails,
@@ -32,12 +32,12 @@ const App: React.FC = () => {
     { path: "/", component: <HomePage />, isPageRenderList: false },
     {
       path: "/socials",
-      component: <IconPageLayout array={SocialLinks} />,
+      component: <IconPageLayout itemsToRender={SocialLinks} />,
       isPageRenderList: false,
     },
     {
       path: "/blogs",
-      component: <IconPageLayout array={BlogLinks} />,
+      component: <IconPageLayout itemsToRender={BlogLinks} />,
       isPageRenderList: false,
     },
     {
@@ -62,7 +62,7 @@ const App: React.FC = () => {
     },
     {
       path: "/skills",
-      component: <IconPageLayout array={SkillsDetails} />,
+      component: <IconPageLayout itemsToRender={SkillsDetails} />,
       isPageRenderList: false,
     },
     { path: "/off", component: <OffScreen />, isPageRenderList: false },

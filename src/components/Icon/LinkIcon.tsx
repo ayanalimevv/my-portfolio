@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { isExternalUrl } from "../../functions/urlFunctions";
+import { isExternalUrl } from "../../functions/helperFunctions";
 
 export const LinkIcon = ({
   link,
