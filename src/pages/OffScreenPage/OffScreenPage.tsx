@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { isPasswordCorrect } from "../../functions/urlFunctions";
+import { isPasswordCorrect } from "../../functions/helperFunctions";
 import { Avatar } from "../../components/Avatar";
 import { PasswordInput } from "./PasswordInput";
 
@@ -34,7 +34,7 @@ const OffScreenPage = () => {
       setErrorCount((p) => (p <= 3 ? ++p : p));
     }
   };
-  
+
   return (
     <div className="flex flex-col justify-center items-center p-4 pb-8">
       <Avatar imagePath="profile.png" altText="Profile Picture" />
@@ -43,6 +43,7 @@ const OffScreenPage = () => {
         passwordHandler={handlePasswordChange}
         submitHandler={handleSubmit}
       />
+
       <Link to={"/"} className="text-xs cursor-pointer">
         Hint: {hints[errorCount]}
       </Link>

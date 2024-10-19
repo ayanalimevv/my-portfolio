@@ -1,10 +1,10 @@
 // App.tsx
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
-import HomePage from "./pages/HomePage";
+import HomePage from "./pages/HomePage/HomePage";
 import ProjectPage from "./pages/ProjectsPage";
 import NotFound from "./pages/NotFoundPage/NotFoundPage";
-import OffScreen from "./pages/OffScreenPage";
+import OffScreen from "./pages/OffScreenPage/OffScreenPage";
 import RedirectToResume from "./pages/RedirectToResumePage";
 import {
   AdditionalDetails,
