@@ -1,5 +1,3 @@
-import { Link } from "react-router-dom";
-
 export const BrowserTopNavigationBar = () => {
   return (
     <div className="flex gap-6 pb-4 px-4 pt-2 border-b border-b-slate-800">
@@ -14,7 +12,7 @@ export const BrowserTopNavigationBar = () => {
             alt=""
           />
 
-          <div className="tooltip ml-auto tooltip-left" data-tip="Shut Down">
+          {/* <div className="tooltip ml-auto tooltip-left" data-tip="Shut Down">
             <Link to={"/off"}>
               {" "}
               <img
@@ -25,7 +23,7 @@ export const BrowserTopNavigationBar = () => {
                 alt=""
               />
             </Link>
-          </div>
+          </div> */}
         </>
       )}
     </div>
