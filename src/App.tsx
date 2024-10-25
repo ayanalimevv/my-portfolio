@@ -4,7 +4,7 @@ import "./App.css";
 import HomePage from "./pages/HomePage/HomePage";
 import ProjectPage from "./pages/ProjectsPage";
 import NotFound from "./pages/NotFoundPage/NotFoundPage";
-import OffScreen from "./pages/OffScreenPage/OffScreenPage";
+// import OffScreen from "./pages/OffScreenPage/OffScreenPage";
 import RedirectToResume from "./pages/RedirectToResumePage";
 import {
   AdditionalDetails,
@@ -16,15 +16,8 @@ import {
 } from "./constants";
 import IconPageLayout from "./layouts/IconPageLayout/IconPageLayout";
 import { RouteRenderer } from "./components/RouteRenderer";
-import { inject } from "@vercel/analytics";
-import { useEffect } from "react";
 
 const App: React.FC = () => {
-  // Vercel function for analytics
-  useEffect(() => {
-    inject();
-  }, []);
-
   // All the urls and component to render array
   // There are two type of pages one rendering icons and another rendering list
   // so isListRendering is true for list rendering items.
@@ -65,7 +58,7 @@ const App: React.FC = () => {
       component: <IconPageLayout itemsToRender={SkillsDetails} />,
       isPageRenderList: false,
     },
-    { path: "/off", component: <OffScreen />, isPageRenderList: false },
+    // { path: "/off", component: <OffScreen />, isPageRenderList: false },
     {
       path: "/resume",
       component: <RedirectToResume />,
