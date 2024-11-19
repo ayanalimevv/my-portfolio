@@ -1,7 +1,7 @@
 import { List } from "./types";
 
 export const ResumeLink =
-  "https://drive.google.com/file/d/1rbg-OYf_NH2Kq0Zzc0zb_-mDvDvAA2Ec/view";
+  "https://drive.google.com/file/d/12lMwvRYZtbwNd4HpKMH8vYwxJqz8uUfk/view";
 
 const imageLinks = {
   folder: "./folder_icon.svg",
